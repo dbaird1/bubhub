@@ -1,5 +1,5 @@
 .container-fluid
-%h2 Remove bike
+%h2 Add bike
 = form_tag bike_removed_page_path, :method => :post, :action => "destroy" do
 	%h3 Bike:
 	%br 
