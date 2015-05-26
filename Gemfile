@@ -37,6 +37,10 @@ group :test do
   gem 'database_cleaner'  # Provides strategies for cleaning up the test db after test runs
 end
 
+group :test, :dev do
+  gem 'simplecov'
+end
+
 group :production do
   gem 'unicorn'
 end

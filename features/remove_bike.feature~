@@ -5,6 +5,7 @@ Feature:
 
 Background:
   Given I am on /bike_remove
+  Given add test bike 45
 
 Scenario: User fills in required fields
   When I fill out the form with:
@@ -18,7 +19,7 @@ Scenario: Reqired fields not filled
   Then I should see "Bike id not entered."
 
 
-Scenario: User fills in required fields
+Scenario: User fills in bad id
   When I fill out the form with:
   | bike_bike_id | thisisafakeidandwillneverbeusedbyanyreasonableadmin |
   And I press "Delete"

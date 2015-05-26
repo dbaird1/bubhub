@@ -5,7 +5,7 @@ Feature:
 
 Background:
   Given I am on /bike_edit
-  add test bike "45"
+  Given add test bike 45
 
 
 Scenario: required feilds not filled
@@ -23,6 +23,8 @@ Scenario: bike doesn't exist
 Scenario: successful edit
   When I fill out the form with:
   | bike_bike_id | 45 |
-  #| bike_location_id | outerspace |
+  | bike_newLocation | 777 |
   And I press "Update"
   Then I should be on bike_list
+  Then I should see "45"
+  Then I should see "777"
